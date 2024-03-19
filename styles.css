@@ -1,0 +1,183 @@
+:root {
+    --x: 100;
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --x: 80;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    :root {
+        --x: 65;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    :root {
+        --x: 50;
+    }
+}
+
+/* Where are we going? */
+
+@media screen and (max-width: 280px) {
+    :root {
+        --x: 40;
+    }
+}
+
+/* Nokia 1100 users also have the right to play :) */
+
+@media screen and (max-width: 220px) {
+    :root {
+        --x: 30;
+    }
+}
+
+/* Google font thing */
+
+.bowlby-one sc-regular {
+    font-family: "Bowlby One SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+* {
+    font-family: "Bowlby One SC", sans-serif;
+    letter-spacing: 0.1rem;
+    font-size: calc(var(--x) * 0.18px);
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(65,159,76,1) 100%);
+    background-size: 200% 100%; 
+    animation: flowingBackground 10s linear infinite;
+    overflow: hidden;
+    z-index: 0; 
+}
+
+.wrapper #container {
+    display: block;
+    margin: auto auto;
+    width: calc(var(--x) * 5px);
+    height: calc(var(--x) * 6.5px);
+    background-color: rgb(121, 181, 214);
+    border-radius: calc(var(--x) * 0.1px);
+    overflow: hidden;
+    z-index: 20;
+}
+
+.wrapper #container #player {
+    position: relative;
+    width: calc(var(--x) * 0.3px);
+    height: calc(var(--x) * 0.3px);
+    background-color: rgb(7, 63, 154);
+    border-radius: calc(var(--x) * 0.05px);
+    left: calc(var(--x) * 2.35px);
+    top: calc(var(--x) * 5.5px);
+}
+
+.wrapper #container .toggle {
+    z-index: 50;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-child {
+    position: relative;
+    width: calc(var(--x) * 0.8px);
+    height: calc(var(--x) * 0.8px);
+    z-index: 30; 
+    overflow: hidden;
+}
+
+.image-child img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 20;
+}
+
+.wrapper #container .toggle button {
+    z-index: 50;
+    box-sizing: border-box;
+    flex: 1;
+    width: 100%;
+    height: calc(var(--x) * 0.3px);
+    background-color: darkblue;
+    color: whitesmoke;
+    border-color: aliceblue;
+    overflow: hidden;
+}
+
+.wrapper #container .toggle button:fucus {
+    outline: none;
+}
+
+.wrapper #container .toggle button > :first-child {
+    border-left: 0;
+}
+
+.wrapper #container .toggle button > :last-child {
+    border-right: 0;
+}
+
+.wrapper #container #cloud #health-container span {
+    z-index: 50;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(var(--x) * 0.4px);
+}
+
+.wrapper #cloud {
+    position: relative;
+    width: 100%;
+    z-index: 10; 
+}
+
+.wrapper #cloud #health-container {
+    width: 100%;
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#target {
+    position: relative;
+    width: calc(var(--x) * 0.25px);
+    height: calc(var(--x) * 0.25px);
+    background-color: green;
+    border-radius: 50%;
+    left: calc(var(--x) * 2.4px);
+    top: calc(var(--x) * 0.1px);
+}
+
+.hider {
+    top: calc(50vh + (var(--x) * 6.5px)/2);
+    position: absolute;
+    width: calc(var(--x) * 5px);
+    height: calc(var(--x) * 5px);
+    background-color: rgb(59, 143, 68);
+    z-index: 999; 
+}

@@ -1,0 +1,54 @@
+<!-- Welcome, 
+
+    this code is totally free to use
+
+    upload, modify, change or delete images in the assets/images folder MAKE SURE
+    to include their path into javascript IMAGES array, images should be square shaped
+
+    try to improve the code by doing these:
+
+    -stop button
+    -health bar
+    -remove hider element, and fix overflow problem
+    -functionality for touch devices
+    -anything other that you think may improve the game 
+
+just telling you a tip, don't touch z-indexes, They were causing weird
+bugs and I don't know how do they work now :) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <title>Game</title>
+</head>
+<body>
+    
+
+    <div class="wrapper" id="wrapper">
+        <div id="container">
+            <div id="cloud" style="z-index: 999 !important;">
+                <div id="health-container">
+                    <span>Health: </span><span id="health">100</span>
+                    <span>Score: </span><span id="score">0</span><span>/10</span>
+                    <span>Level: </span><span id="level">0</span>
+                </div>
+            </div>
+            <div class="toggle">
+                <button id="start">start</button>
+                <button id="reset">reset</button>
+            </div>
+            <div id="player"></div>
+            <div id="target"></div>
+        </div>
+        <div class="hider"></div>
+    </div>  
+
+</body>
+<script src="script.js"></script>
+</html>
